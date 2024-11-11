@@ -44,7 +44,6 @@ class StoreController {
       Console.print(error.message);
     }
   }
-
   Result() {
     this.result = new Result(this.productList, this.free, this.order);
     const buyprice = this.result.BuyPrice();
