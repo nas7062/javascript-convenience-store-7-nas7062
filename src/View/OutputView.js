@@ -30,7 +30,6 @@ class OutputView {
   printReceipt(order, products) {
     Console.print(OUTPUT_MESSAGE.RECEIPT_INTRO);
     Console.print(OUTPUT_MESSAGE.RECEIPT_INFO);
-    console.log(products);
     order.forEach((item) => {
       const product = products.find((prod) => prod.name === item.name);
       if (product) {

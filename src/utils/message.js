@@ -6,7 +6,7 @@ export const ERROR_MESSAGE = Object.freeze({
 export const PROMOTION_NAME = Object.freeze({
   TWO_PLUS_ONE: '탄산2+1',
   FLASH_SALE: '반짝할인',
-  RECOMMENDED: 'MD추천'
+  RECOMMENDED: 'MD추천상품',
 })
 export const INPUT_MESSAGE = Object.freeze({
   BUY_INPUT: '\n구매하실 상품명과 수량을 입력해 주세요. (예: [사이다-2],[감자칩-1])\n',

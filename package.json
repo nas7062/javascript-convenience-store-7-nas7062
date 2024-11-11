@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@woowacourse/mission-utils": "^2.2.0",
-    "eslint": "^9.14.0"
+    "eslint": "^9.14.0",
+    "javascript-convenience-store": "file:"
   },
   "jest": {
     "transform": {

@@ -79,14 +79,17 @@ class StoreController {
         const promotion = this.promotionList.find((promo) => promo.name === product.promotion);
         if (promotion) {
           if (promotion.name === PROMOTION_NAME.TWO_PLUS_ONE) {
-            const { finalCount, FreeCount } = await promotion.TwoPlusOne(item.name, item.quantity, product.promotionCount)
+            const { finalCount, FreeCount } = await promotion.TwoPlusOne(
+            item.name, item.quantity, product.promotionCount
+            );
             item.quantity = finalCount;
             this.updateProductQuantity(item, product, finalCount, FreeCount);
           }
-          if (promotion.name === PROMOTION_NAME.FLASH_SALE || promotion.name === PROMOTION_NAME.RECOMMENDEDn) {
+          if (promotion.name === PROMOTION_NAME.FLASH_SALE || promotion.name === PROMOTION_NAME.RECOMMENDED) {
             const { finalCount, FreeCount } = await promotion.OnePlusOne(
               item.name, item.quantity, product.promotionCount
             );
+            item.quantity= finalCount;
             this.updateProductQuantity(item, product, finalCount, FreeCount);
           }
         } if (!promotion) {
