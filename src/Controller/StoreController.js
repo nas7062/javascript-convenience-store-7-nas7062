@@ -62,10 +62,11 @@ class StoreController {
   async ReStartPrint() {
     try {
       const input = await Console.readLineAsync(`감사합니다. 구매하고 싶은 다른 상품이 있나요? (Y/N)\n`);
+      const UpperInput = input.toUpperCase();
       if (UpperInput !== 'Y' && UpperInput !== 'N') {
         throw new Error(ERROR_MESSAGE.YES_OR_NO)
       }
-      if (input === 'Y')
+      if (UpperInput === 'Y')
         return await this.Start();
     } catch (error) {
       Console.print(error.message);
@@ -78,7 +79,7 @@ class StoreController {
         const promotion = this.promotionList.find((promo) => promo.name === product.promotion);
         if (promotion) {
           if (promotion.name === PROMOTION_NAME.TWO_PLUS_ONE) {
-            await this.applyTwoPlusOnePromotion(promotion, item, product)
+            const { finalCount, FreeCount } = await promotion.TwoPlusOne(item.name, item.quantity, product.promotionCount)
             item.quantity = finalCount;
             this.updateProductQuantity(item, product, finalCount, FreeCount);
           }

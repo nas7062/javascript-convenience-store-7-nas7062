@@ -1,5 +1,5 @@
 import { Console } from "@woowacourse/mission-utils";
-import { PROMOTION_MESSAGE, OUTPUT_MESSAGE } from "../utils/message";
+import { PROMOTION_MESSAGE, OUTPUT_MESSAGE } from "../utils/message.js";
 class OutputView {
   printWelcome() {
     Console.print(OUTPUT_MESSAGE.HELLO);
@@ -30,6 +30,7 @@ class OutputView {
   printReceipt(order, products) {
     Console.print(OUTPUT_MESSAGE.RECEIPT_INTRO);
     Console.print(OUTPUT_MESSAGE.RECEIPT_INFO);
+    console.log(products);
     order.forEach((item) => {
       const product = products.find((prod) => prod.name === item.name);
       if (product) {
