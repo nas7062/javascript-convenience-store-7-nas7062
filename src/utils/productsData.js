@@ -19,6 +19,7 @@ name,price,quantity,promotion
 컵라면,1700,1,MD추천상품
 컵라면,1700,10,null
 `
+
 export const promotionData = `
 name,buy,get,start_date,end_date
 탄산2+1,2,1,2024-01-01,2024-12-31
