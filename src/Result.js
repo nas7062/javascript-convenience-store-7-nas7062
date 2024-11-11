@@ -4,6 +4,7 @@ class Result {
       this.free = free,
       this.order = order
   }
+
   BuyPrice() {
     let totalprice = 0;
     let totalCount = 0;
@@ -17,6 +18,7 @@ class Result {
     })
     return { totalCount, totalprice };
   }
+
   FreePrice() {
     let totalFree = 0;
     this.free.forEach((item) => {
@@ -28,6 +30,7 @@ class Result {
     })
     return totalFree;
   }
+
   MembershipDiscount(promotion, membership) {
     let MembershipDiscount = 0;
     if (membership === 'Y') {
@@ -42,6 +45,7 @@ class Result {
     }
     return 0;
   }
+  
   TotalPrice(promotion, membership) {
     const { totalprice } = this.BuyPrice();
     const freeprice = this.FreePrice();
