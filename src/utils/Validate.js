@@ -1,7 +1,6 @@
 import { ERROR_MESSAGE } from "./message.js";
 
 class Validate {
-
   static BuyValid(products) {
     for (let product of products) {
       if (!product.name || !product.quantity || isNaN(product.quantity) || product.quantity <= 0) {
