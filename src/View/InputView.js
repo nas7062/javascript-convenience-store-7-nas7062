@@ -22,6 +22,7 @@ class InputView {
       return await this.BuyInput(productList);
     }
   }
+
   async MemberShipInput() {
     try {
       const input = await Console.readLineAsync(INPUT_MESSAGE.MEMBER_SHIP);
@@ -36,6 +37,7 @@ class InputView {
       return await this.MemberShipInput();
     }
   }
+
   async PromotionPrint(name) {
     try {
       const input = await Console.readLineAsync(PROMOTION_MESSAGE.PROMOTION_PLUS(name));
@@ -50,6 +52,7 @@ class InputView {
       return await this.PromotionPrint(name);
     }
   }
+  
   async OnlyPromotionInput(name, count, finalCount) {
     try {
       const input = await Console.readLineAsync(PROMOTION_MESSAGE.ONLY_PROMOTION(name,count,finalCount));
