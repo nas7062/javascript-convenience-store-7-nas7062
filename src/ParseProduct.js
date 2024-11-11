@@ -27,6 +27,7 @@ class ParseProducts {
     }
     return products;
   }
+  
   async parsePromotion() {
     const lines = this.promotion.trim().split('\n');
     const promotions = [];
