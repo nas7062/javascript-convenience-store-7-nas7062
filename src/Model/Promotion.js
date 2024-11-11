@@ -1,7 +1,6 @@
 import { Console, DateTimes } from '@woowacourse/mission-utils';
 import InputView from '../View/InputView.js';
 import { PROMOTION_MESSAGE } from '../utils/message.js';
-import { freeze } from '@reduxjs/toolkit';
 
 class Promotion {
   constructor(name, buy, get, startDate, endDate) {
